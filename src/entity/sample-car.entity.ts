@@ -1,4 +1,16 @@
-import { Entity } from 'typeorm';
+import { Column, Entity, PrimaryGeneratedColumn } from 'typeorm';
 
 @Entity()
-export class SampleCar {}
+export class SampleCar {
+  @PrimaryGeneratedColumn()
+  id: number;
+
+  @Column()
+  userId: number;
+
+  @Column()
+  carName: string;
+
+  @Column()
+  isDeleted: boolean;
+}
